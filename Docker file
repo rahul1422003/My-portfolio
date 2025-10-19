@@ -1,0 +1,9 @@
+# Base image for Tomcat 10 with Java 17
+FROM tomcat:10-jdk17-openjdk
+
+# WAR file ko Tomcat ke webapps folder mein copy karein.
+# Zaroor check karein ki aapki WAR file ka naam yahi 'portfolio.war' ho.
+COPY portfolio.war /usr/local/tomcat/webapps/
+
+# Port 8080 ko expose karein jahan Tomcat run hota hai
+EXPOSE 8080
